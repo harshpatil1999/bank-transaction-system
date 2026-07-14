@@ -1,0 +1,27 @@
+{
+  "name": "bank-transaction-system",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "javascript",
+    "nodejs"
+  ],
+  "license": "ISC",
+  "author": "Harsh Patil",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.7.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
