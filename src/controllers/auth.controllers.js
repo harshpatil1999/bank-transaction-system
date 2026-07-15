@@ -21,7 +21,7 @@ const registerUserController = async (req, res) => {
     process.env.JWT_SECRET,
     { expiresIn: "3d" },
   );
-  res.cookies("token", token);
+  res.cookie("token", token);
   return res.status(201).json({
     user: {
       _id: newUser._id,
