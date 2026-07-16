@@ -23,8 +23,7 @@ const registerUserController = async (req, res) => {
     { expiresIn: "3d" },
   );
   res.cookie("token", token);
-  await emailService.sendRegistrationEmail(newUser.name, newUser.email);
-  return res.status(201).json({
+  res.status(201).json({
     message: "User registered successfully!",
     user: {
       _id: newUser._id,
@@ -33,6 +32,7 @@ const registerUserController = async (req, res) => {
     },
     token,
   });
+  await emailService.sendRegistrationEmail(newUser.name, newUser.email);
 };
 
 /**
